@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CardStack">
+        <attr name="max_visible" format="integer"/>
+        <attr name="rotation" format="float"/>
+        <attr name="spacing" format="dimension"/>
+        <attr name="above" format="boolean"/>
+        <attr name="below" format="boolean"/>
+        <attr name="opacity_end" format="float"/>
+        <attr name="gravity" format="enum">
+            <enum name="top" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="bottom" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>
