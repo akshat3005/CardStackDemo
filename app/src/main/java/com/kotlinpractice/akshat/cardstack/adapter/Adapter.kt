@@ -8,10 +8,6 @@ import android.widget.BaseAdapter
 import android.widget.TextView
 import com.kotlinpractice.akshat.cardstack.R
 
-/**
- * Created by akshat-3049 on 16/06/18.
- */
-
 class Adapter(private val data: List<String>, internal var activity: Activity) : BaseAdapter() {
 
     override fun getCount(): Int {

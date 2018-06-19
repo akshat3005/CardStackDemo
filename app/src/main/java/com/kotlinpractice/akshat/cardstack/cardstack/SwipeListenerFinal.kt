@@ -7,9 +7,6 @@ import android.view.ViewGroup
 import android.view.ViewPropertyAnimator
 import android.view.animation.OvershootInterpolator
 
-/**
- * Created by akshat-3049 on 16/06/18.
- */
 class SwipeListenerFinal : View.OnTouchListener {
 
     private var ROTATION_DEGREES = 30f

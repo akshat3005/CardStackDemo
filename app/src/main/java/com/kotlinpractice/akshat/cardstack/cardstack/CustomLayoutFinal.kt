@@ -8,9 +8,6 @@ import android.view.View
 import android.widget.FrameLayout
 import java.util.*
 
-/**
- * Created by akshat-3049 on 16/06/18.
- */
 class CustomLayoutFinal : FrameLayout {
 
     constructor(context: Context) : super(context) {

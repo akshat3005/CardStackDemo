@@ -14,9 +14,6 @@ import android.widget.FrameLayout
 import com.kotlinpractice.akshat.cardstack.R
 import java.util.*
 
-/**
- * Created by akshat-3049 on 16/06/18.
- */
 class CardStackFinal(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
 
     private var eventCallback: SwipeEventCallback? = null

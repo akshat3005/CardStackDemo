@@ -6,14 +6,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-
 import com.kotlinpractice.akshat.cardstack.R
 
-
-/**
- * A simple [Fragment] subclass.
- */
 class DiscoverFragment : Fragment() {
 
 
@@ -23,4 +17,4 @@ class DiscoverFragment : Fragment() {
         return inflater?.inflate(R.layout.fragment_discover, container, false)
     }
 
-}// Required empty public constructor
+}
