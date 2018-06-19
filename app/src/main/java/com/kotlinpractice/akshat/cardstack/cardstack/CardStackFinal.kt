@@ -40,16 +40,16 @@ class CardStackFinal(context: Context, attrs: AttributeSet) : FrameLayout(contex
     init {
         val a = context.theme.obtainStyledAttributes(
                 attrs,
-                R.styleable.CardStack,
+                R.styleable.CardStackFinal,
                 0, 0)
         try {
-            MAX_CARDS = a.getInt(R.styleable.CardStack_max_visible, 0)
-            ROTATION = a.getFloat(R.styleable.CardStack_rotation, 15f)
-            SPACING = a.getDimension(R.styleable.CardStack_spacing, 15f)
-            ABOVE = a.getBoolean(R.styleable.CardStack_above, true)
-            BELOW = a.getBoolean(R.styleable.CardStack_below, false)
-            GRAVITY = a.getInt(R.styleable.CardStack_gravity, 0)
-            OPACITY_END = a.getFloat(R.styleable.CardStack_opacity_end, 0.33f)
+            MAX_CARDS = a.getInt(R.styleable.CardStackFinal_max_visible, 0)
+            ROTATION = a.getFloat(R.styleable.CardStackFinal_rotation, 15f)
+            SPACING = a.getDimension(R.styleable.CardStackFinal_spacing, 15f)
+            ABOVE = a.getBoolean(R.styleable.CardStackFinal_above, true)
+            BELOW = a.getBoolean(R.styleable.CardStackFinal_below, false)
+            GRAVITY = a.getInt(R.styleable.CardStackFinal_gravity, 0)
+            OPACITY_END = a.getFloat(R.styleable.CardStackFinal_opacity_end, 0.33f)
 
         } finally {
             a.recycle()
