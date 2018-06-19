@@ -1,7 +1,6 @@
 package com.kotlinpractice.akshat.cardstack.cardstack
 
 import android.animation.Animator
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +20,7 @@ class SwipeListenerFinal : View.OnTouchListener {
     private var mActivePointerId: Int = 0
     private var initialXPress: Float = 0.toFloat()
     private var initialYPress: Float = 0.toFloat()
+
     private var parent: ViewGroup? = null
     private var parentWidth: Float = 0.toFloat()
     private var parentHeight: Float = 0.toFloat()
@@ -29,9 +29,7 @@ class SwipeListenerFinal : View.OnTouchListener {
     private var card: View? = null
     internal var callback: SwipeCallback
     private var deactivated: Boolean = false
-
     private var click = true
-
 
     constructor(card: View, callback: SwipeCallback, initialX: Float, initialY: Float, rotation: Float, opacityEnd: Float) {
         this.card = card
@@ -41,19 +39,6 @@ class SwipeListenerFinal : View.OnTouchListener {
         this.parent = card.parent as ViewGroup
         this.parentWidth = parent!!.width.toFloat()
         this.parentHeight = parent!!.height.toFloat()
-        this.ROTATION_DEGREES = rotation
-        this.OPACITY_END = opacityEnd
-        this.paddingLeft = (card.parent as ViewGroup).paddingLeft
-    }
-
-    constructor(card: View, callback: SwipeCallback, initialX: Float, initialY: Float, rotation: Float, opacityEnd: Float, screenWidth: Int, screenHeight: Int) {
-        this.card = card
-        this.initialX = initialX
-        this.initialY = initialY
-        this.callback = callback
-        this.parent = card.parent as ViewGroup
-        this.parentWidth = screenWidth.toFloat()
-        this.parentHeight = screenHeight.toFloat()
         this.ROTATION_DEGREES = rotation
         this.OPACITY_END = opacityEnd
         this.paddingLeft = (card.parent as ViewGroup).paddingLeft
@@ -120,7 +105,6 @@ class SwipeListenerFinal : View.OnTouchListener {
             MotionEvent.ACTION_UP -> {
                 //gesture has finished
                 //check to see if card has moved beyond the left or right bounds or reset
-                //card position
                 checkCardForEvent()
 
                 if (event.findPointerIndex(mActivePointerId) == 0) {
@@ -137,7 +121,6 @@ class SwipeListenerFinal : View.OnTouchListener {
     }
 
     fun checkCardForEvent() {
-
         if (cardBeyondLeftBorder()) {
             animateOffScreenLeft(160)
                     .setListener(object : Animator.AnimatorListener {
@@ -268,7 +251,6 @@ class SwipeListenerFinal : View.OnTouchListener {
                 .y(0f)
                 .rotation(-30f)
     }
-
 
     fun animateOffScreenRight(duration: Int): ViewPropertyAnimator {
         return card!!.animate()

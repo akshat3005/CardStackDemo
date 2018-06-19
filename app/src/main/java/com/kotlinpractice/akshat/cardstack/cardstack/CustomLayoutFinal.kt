@@ -6,13 +6,13 @@ import android.os.Build
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by akshat-3049 on 16/06/18.
  */
 class CustomLayoutFinal : FrameLayout {
+
     constructor(context: Context) : super(context) {
         clipChildren = false
     }
@@ -35,7 +35,6 @@ class CustomLayoutFinal : FrameLayout {
     override fun onFinishInflate() {
         super.onFinishInflate()
         val childCount = childCount
-        val params = layoutParams
 
         val children = ArrayList<View>()
         var swipeDeck: View? = null
@@ -58,5 +57,4 @@ class CustomLayoutFinal : FrameLayout {
         invalidate()
         requestLayout()
     }
-
 }

@@ -11,22 +11,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Adapter
 import android.widget.FrameLayout
-
 import com.kotlinpractice.akshat.cardstack.R
-
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by akshat-3049 on 16/06/18.
  */
 class CardStackFinal(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
-    private var eventCallback: SwipeEventCallback? = null
 
+    private var eventCallback: SwipeEventCallback? = null
     private val padLeft: Int
     private val padRight: Int
     private val padTop: Int
     private val padBottom: Int
-
     /**
      * The adapter with all the data
      */
@@ -77,6 +74,7 @@ class CardStackFinal(context: Context, attrs: AttributeSet) : FrameLayout(contex
             ViewCompat.setTranslationZ(this, java.lang.Float.MIN_VALUE)
         }
     }
+
 
     fun setAdapter(adapter: Adapter) {
         if (this.mAdapter != null) {
