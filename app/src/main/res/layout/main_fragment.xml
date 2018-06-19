@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:swipedeck="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kotlinpractice.akshat.cardstack.MainActivity">
+    xmlns:swipedeck="http://schemas.android.com/apk/res-auto">
 
-    <com.kotlinpractice.akshat.cardstack.cardstack.CustomLayout
+    <com.kotlinpractice.akshat.cardstack.cardstack.CustomLayoutFinal
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.kotlinpractice.akshat.cardstack.cardstack.CardStack
+        <com.kotlinpractice.akshat.cardstack.cardstack.CardStackFinal
             android:id="@+id/swipe_deck"
             android:layout_width="match_parent"
             android:layout_height="480dp"
@@ -21,6 +19,6 @@
             swipedeck:above="true"
             swipedeck:rotation="30" />
 
-    </com.kotlinpractice.akshat.cardstack.cardstack.CustomLayout>
+    </com.kotlinpractice.akshat.cardstack.cardstack.CustomLayoutFinal>
 
 </android.support.constraint.ConstraintLayout>

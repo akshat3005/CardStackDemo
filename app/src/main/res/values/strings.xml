@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CardStackDemo</string>
+    <string name="chat_fragment_description">Chat</string>
+    <string name="discover_fragment_description">Discover</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="action_settings">Settings</string>
 </resources>

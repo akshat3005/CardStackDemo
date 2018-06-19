@@ -1,7 +1,7 @@
 package com.kotlinpractice.akshat.cardstack.eventlistener
 
 import android.util.Log
-import com.kotlinpractice.akshat.cardstack.cardstack.CardStack
+import com.kotlinpractice.akshat.cardstack.cardstack.CardStackFinal
 
 /**
  * Created by akshat-3049 on 18/06/18.
@@ -11,9 +11,9 @@ class EventListener {
 
     companion object {
 
-        fun eventCallback(cardStack : CardStack) {
+        fun eventCallback(cardStack : CardStackFinal) {
 
-            cardStack.setEventCallback(object : CardStack.SwipeEventCallback {
+            cardStack.setEventCallback(object : CardStackFinal.SwipeEventCallback {
                 override fun cardActionDown() {
                     Log.i("MainActivity", "card was swiped down, position in com.kotlinpractice.akshat.cardstack.adapter: " )
                 }

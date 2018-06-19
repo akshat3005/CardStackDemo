@@ -17,9 +17,9 @@ import com.kotlinpractice.akshat.cardstack.R
 import java.util.ArrayList
 
 /**
- * Created by aaron on 4/12/2015.
+ * Created by akshat-3049 on 16/06/18.
  */
-class CardStack(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
+class CardStackFinal(context: Context, attrs: AttributeSet) : FrameLayout(context, attrs) {
     private var eventCallback: SwipeEventCallback? = null
 
     private val padLeft: Int
@@ -35,7 +35,7 @@ class CardStack(context: Context, attrs: AttributeSet) : FrameLayout(context, at
     internal var nextAdapterCard = 0
     private var restoreInstanceState = false
 
-    private var swipeListener: SwipeListener? = null
+    private var swipeListener: SwipeListenerFinal? = null
     private var cardInteraction: Boolean = false
 
     private val AnimationTime = 160
@@ -249,7 +249,7 @@ class CardStack(context: Context, attrs: AttributeSet) : FrameLayout(context, at
 
         if (child != null) {
             //make sure we have a card
-            swipeListener = SwipeListener(child, object : SwipeListener.SwipeCallback {
+            swipeListener = SwipeListenerFinal(child, object : SwipeListenerFinal.SwipeCallback {
                 override fun cardSwipedLeft() {
                     val positionInAdapter = nextAdapterCard - childCount
                     removeCard()

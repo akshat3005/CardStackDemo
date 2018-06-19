@@ -10,9 +10,9 @@ import android.widget.FrameLayout
 import java.util.ArrayList
 
 /**
- * Created by aaron on 23/12/2015.
+ * Created by akshat-3049 on 16/06/18.
  */
-class CustomLayout : FrameLayout {
+class CustomLayoutFinal : FrameLayout {
     constructor(context: Context) : super(context) {
         clipChildren = false
     }
@@ -41,7 +41,7 @@ class CustomLayout : FrameLayout {
         var swipeDeck: View? = null
         for (i in 0 until childCount) {
             val child = getChildAt(i)
-            if (child is CardStack) {
+            if (child is CardStackFinal) {
                 swipeDeck = getChildAt(i)
             } else {
                 children.add(child)

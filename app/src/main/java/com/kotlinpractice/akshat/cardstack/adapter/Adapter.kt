@@ -37,8 +37,7 @@ class Adapter(private val data: List<String>, internal var activity: Activity) :
         (v!!.findViewById<View>(R.id.textView) as TextView).text = data[position]
 
         v.setOnClickListener {
-            val item = getItem(position) as String
-            Log.i("MainActivity", item)
+            Log.i("MainActivity", position.toString())
         }
 
         return v

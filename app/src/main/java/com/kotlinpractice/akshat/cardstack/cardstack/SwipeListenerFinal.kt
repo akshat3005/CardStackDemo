@@ -9,9 +9,9 @@ import android.view.ViewPropertyAnimator
 import android.view.animation.OvershootInterpolator
 
 /**
- * Created by aaron on 4/12/2015.
+ * Created by akshat-3049 on 16/06/18.
  */
-class SwipeListener : View.OnTouchListener {
+class SwipeListenerFinal : View.OnTouchListener {
 
     private var ROTATION_DEGREES = 30f
     internal var OPACITY_END = 0.33f
@@ -181,7 +181,52 @@ class SwipeListener : View.OnTouchListener {
                     })
             callback.cardSwipedRight()
             this.deactivated = true
-        } else {
+        }
+        else if (cardBeyondTopBorder()) {
+            animateOffScreenLeft(160)
+                    .setListener(object : Animator.AnimatorListener {
+
+                        override fun onAnimationStart(animation: Animator) {
+
+                        }
+
+                        override fun onAnimationEnd(animation: Animator) {
+
+                            callback.cardOffScreen()
+                        }
+
+                        override fun onAnimationCancel(animation: Animator) {
+
+                        }
+
+                        override fun onAnimationRepeat(animation: Animator) {}
+                    })
+            callback.cardSwipedRight()
+            this.deactivated = true
+        } else if (cardBeyondBottomBorder()) {
+            animateOffScreenRight(160)
+                    .setListener(object : Animator.AnimatorListener {
+
+                        override fun onAnimationStart(animation: Animator) {
+
+                        }
+
+                        override fun onAnimationEnd(animation: Animator) {
+                            callback.cardOffScreen()
+                        }
+
+                        override fun onAnimationCancel(animation: Animator) {
+
+                        }
+
+                        override fun onAnimationRepeat(animation: Animator) {
+
+                        }
+                    })
+            callback.cardSwipedLeft()
+            this.deactivated = true
+        }
+        else {
             resetCardPosition()
         }
     }
